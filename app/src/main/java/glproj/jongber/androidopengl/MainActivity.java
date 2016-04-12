@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import glproj.jongber.androidopengl.term1.activity.OpenGLActivity;
+import glproj.jongber.androidopengl.term2.activity.TriangleActivity;
+
 
 public class MainActivity extends AppCompatActivity
 {
@@ -21,7 +23,7 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mOpenglActivities = (ListView)findViewById(R.id.list_opengl_activity);
+        mOpenglActivities = (ListView) findViewById(R.id.list_opengl_activity);
         mAdapter = new ArrayAdapter<>(getApplicationContext(), R.layout.activity_main_listview_item);
 
         mOpenglActivities.setAdapter(mAdapter);
@@ -32,12 +34,18 @@ public class MainActivity extends AppCompatActivity
             {
                 switch (position)
                 {
-                    case 0 :
+                    case 0:
                     {
                         Intent intent = new Intent(getApplicationContext(), OpenGLActivity.class);
                         startActivity(intent);
-                    }
                         break;
+                    }
+                    case 1:
+                    {
+                        Intent intent = new Intent(getApplicationContext(), TriangleActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
                     default:
                         break;
                 }
@@ -45,6 +53,7 @@ public class MainActivity extends AppCompatActivity
         });
 
         mAdapter.add("OpenGL ES Test 1 Green Screen");
+        mAdapter.add("OpenGL ES Test 2 Triangle");
 
     }
 }
