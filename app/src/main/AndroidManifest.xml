@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".term1.activity.OpenGLActivity"/>
+        <activity android:name=".term2.activity.TriangleActivity"/>
     </application>
 
 </manifest>
