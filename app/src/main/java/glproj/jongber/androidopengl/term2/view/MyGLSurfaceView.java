@@ -22,4 +22,10 @@ public class MyGLSurfaceView extends GLSurfaceView
         // Set the Renderer for drawing on the GLSurfaceView
         setRenderer(mRenderer);
     }
+
+    public void cleanup()
+    {
+        mRenderer.cleanup();
+    }
+
 }

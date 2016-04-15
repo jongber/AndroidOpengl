@@ -85,6 +85,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer
     {
         // Redraw background color
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
+        GLES20.glClearColor(0.0f, 0.5f, 0.5f, 1.0f);
 
         GLES20.glUseProgram(mShaderProg);
         {
@@ -100,5 +101,12 @@ public class MyGLRenderer implements GLSurfaceView.Renderer
     public void onSurfaceChanged(GL10 unused, int width, int height)
     {
         GLES20.glViewport(0, 0, width, height);
+    }
+
+    public void cleanup()
+    {
+        GLES20.glDetachShader(mShaderProg, mVShader);
+        GLES20.glDetachShader(mShaderProg, mFShader);
+        GLES20.glDeleteProgram(mShaderProg);
     }
 }

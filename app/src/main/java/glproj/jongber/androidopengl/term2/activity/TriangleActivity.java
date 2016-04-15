@@ -15,7 +15,7 @@ import glproj.jongber.androidopengl.term2.view.MyGLSurfaceView;
  */
 public class TriangleActivity extends Activity
 {
-    private GLSurfaceView mGLView;
+    private MyGLSurfaceView mGLView;
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -26,5 +26,12 @@ public class TriangleActivity extends Activity
         // as the ContentView for this Activity.
         mGLView = new MyGLSurfaceView(this);
         setContentView(mGLView);
+    }
+
+    @Override
+    protected void onDestroy()
+    {
+        super.onDestroy();
+        mGLView.cleanup();
     }
 }
