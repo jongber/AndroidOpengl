@@ -11,6 +11,7 @@ import android.widget.ListView;
 import glproj.jongber.androidopengl.term1.activity.OpenGLActivity;
 import glproj.jongber.androidopengl.term2.activity.TriangleActivity;
 import glproj.jongber.androidopengl.term3.activity.RotateCubeActivity;
+import glproj.jongber.androidopengl.term4.activity.ZoomActivity;
 
 
 public class MainActivity extends AppCompatActivity
@@ -53,6 +54,12 @@ public class MainActivity extends AppCompatActivity
                         startActivity(intent);
                         break;
                     }
+                    case StudyPlan.Plan4Numb:
+                    {
+                        Intent intent = new Intent(getApplicationContext(), ZoomActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
                     default:
                         break;
                 }
@@ -62,6 +69,7 @@ public class MainActivity extends AppCompatActivity
         mAdapter.add(StudyPlan.Plan1Name);
         mAdapter.add(StudyPlan.Plan2Name);
         mAdapter.add(StudyPlan.Plan3Name);
+        mAdapter.add(StudyPlan.Plan4Name);
 
     }
 }

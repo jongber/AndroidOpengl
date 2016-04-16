@@ -13,4 +13,7 @@ public class StudyPlan
 
     public final static String Plan3Name = "3 : Rotate Cube";
     public final static int Plan3Numb = 2;
+
+    public final static String Plan4Name = "4 : Zoom Cube";
+    public final static int Plan4Numb = 3;
 }
