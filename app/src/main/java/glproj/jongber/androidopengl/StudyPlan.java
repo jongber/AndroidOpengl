@@ -11,6 +11,6 @@ public class StudyPlan
     public final static String Plan2Name = "2 : Try Shader";
     public final static int Plan2Numb = 1;
 
-    public final static String Plan3Name = "3 : Rotate Quad";
+    public final static String Plan3Name = "3 : Rotate Cube";
     public final static int Plan3Numb = 2;
 }
