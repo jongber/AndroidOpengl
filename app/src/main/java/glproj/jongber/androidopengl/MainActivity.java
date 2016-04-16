@@ -10,6 +10,7 @@ import android.widget.ListView;
 
 import glproj.jongber.androidopengl.term1.activity.OpenGLActivity;
 import glproj.jongber.androidopengl.term2.activity.TriangleActivity;
+import glproj.jongber.androidopengl.term3.activity.RotateCubeActivity;
 
 
 public class MainActivity extends AppCompatActivity
@@ -34,15 +35,21 @@ public class MainActivity extends AppCompatActivity
             {
                 switch (position)
                 {
-                    case 0:
+                    case StudyPlan.Plan1Numb:
                     {
                         Intent intent = new Intent(getApplicationContext(), OpenGLActivity.class);
                         startActivity(intent);
                         break;
                     }
-                    case 1:
+                    case StudyPlan.Plan2Numb:
                     {
                         Intent intent = new Intent(getApplicationContext(), TriangleActivity.class);
+                        startActivity(intent);
+                        break;
+                    }
+                    case StudyPlan.Plan3Numb:
+                    {
+                        Intent intent = new Intent(getApplicationContext(), RotateCubeActivity.class);
                         startActivity(intent);
                         break;
                     }
@@ -52,8 +59,9 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        mAdapter.add("OpenGL ES Test 1 Green Screen");
-        mAdapter.add("OpenGL ES Test 2 Triangle");
+        mAdapter.add(StudyPlan.Plan1Name);
+        mAdapter.add(StudyPlan.Plan2Name);
+        mAdapter.add(StudyPlan.Plan3Name);
 
     }
 }

@@ -19,6 +19,7 @@
         </activity>
         <activity android:name=".term1.activity.OpenGLActivity"/>
         <activity android:name=".term2.activity.TriangleActivity"/>
+        <activity android:name=".term3.activity.RotateCubeActivity"/>
     </application>
 
 </manifest>

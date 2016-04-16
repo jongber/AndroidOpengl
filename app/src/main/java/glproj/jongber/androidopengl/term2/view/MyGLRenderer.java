@@ -92,7 +92,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer
             mPositionHandle = GLES20.glGetAttribLocation(mShaderProg, "pos");
             GLES20.glEnableVertexAttribArray(mPositionHandle);
             GLES20.glVertexAttribPointer(mPositionHandle, 3, GLES20.GL_FLOAT, false, 12, mTriMeshBuf);
-            GLES20.glDrawArrays(GLES20.GL_TRIANGLES, 0, 12);
+            GLES20.glDrawArrays(GLES20.GL_TRIANGLES, 0, 3);
             GLES20.glDisableVertexAttribArray(mPositionHandle);
         }
         GLES20.glUseProgram(0);
