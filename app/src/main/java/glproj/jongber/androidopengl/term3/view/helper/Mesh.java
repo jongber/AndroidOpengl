@@ -20,6 +20,9 @@ public class Mesh
     private FloatBuffer mColorBuf;
     private ShortBuffer mIndexBuf;
 
+    private static int COORD_PER_VERTEX = 3;
+    private static int BYTE_OF_FLOAT = 4;
+
     public Mesh(float[] pos, float[] color, short[] index)
     {
         mPos = pos;
@@ -65,8 +68,8 @@ public class Mesh
         GLES20.glEnableVertexAttribArray(posHandle);
         GLES20.glEnableVertexAttribArray(colorHandle);
 
-        GLES20.glVertexAttribPointer(posHandle, 3 , GLES20.GL_FLOAT, false, 3 * 4, mVertBuf);
-        GLES20.glVertexAttribPointer(colorHandle, 3 , GLES20.GL_FLOAT, false, 3 * 4, mColorBuf);
+        GLES20.glVertexAttribPointer(posHandle, COORD_PER_VERTEX , GLES20.GL_FLOAT, false, COORD_PER_VERTEX * BYTE_OF_FLOAT, mVertBuf);
+        GLES20.glVertexAttribPointer(colorHandle, COORD_PER_VERTEX , GLES20.GL_FLOAT, false, COORD_PER_VERTEX * BYTE_OF_FLOAT, mColorBuf);
 
         GLES20.glDrawElements(GLES20.GL_TRIANGLES, mIndex.length, GLES20.GL_UNSIGNED_SHORT, mIndexBuf);
 

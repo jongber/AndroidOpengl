@@ -129,7 +129,7 @@ public class Shader
     public void setUniformMatrixF(String uniformValue, FloatBuffer buffer)
     {
         int loc = getUniformLoc(uniformValue);
-        if (loc != 0)
+        if (loc >= 0)
         {
             GLES20.glUniformMatrix4fv(loc, 1, false, buffer);
         }
