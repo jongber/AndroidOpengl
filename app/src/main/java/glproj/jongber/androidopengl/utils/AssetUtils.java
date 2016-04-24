@@ -1,9 +1,13 @@
 package glproj.jongber.androidopengl.utils;
 
 import android.content.Context;
+import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 
 /**
@@ -47,5 +51,33 @@ public class AssetUtils
 
 
         return ret;
+    }
+
+    public static Bitmap loadImage(Context context, int resourceId)
+    {
+        final BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inScaled = false;
+
+        final Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), resourceId, options);
+
+        return bitmap;
+    }
+
+    public static Bitmap loadImage(Context context, String assetFileName)
+    {
+        AssetManager manager = context.getAssets();
+        InputStream inStr = null;
+        try
+        {
+            inStr = manager.open(assetFileName);
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+
+        Bitmap bitmap = BitmapFactory.decodeStream(inStr);
+
+        return bitmap;
     }
 }

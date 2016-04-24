@@ -20,7 +20,8 @@
         <activity android:name=".term1.activity.OpenGLActivity"/>
         <activity android:name=".term2.activity.TriangleActivity"/>
         <activity android:name=".term3.activity.RotateCubeActivity"/>
-        <activity android:name=".term4.activity.ZoomActivity"/>
+        <activity android:name=".term4.activity.TextureCubeActivity"/>
+        <activity android:name=".term5.activity.ZoomActivity"/>
     </application>
 
 </manifest>

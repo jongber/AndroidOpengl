@@ -11,7 +11,8 @@ import android.widget.ListView;
 import glproj.jongber.androidopengl.term1.activity.OpenGLActivity;
 import glproj.jongber.androidopengl.term2.activity.TriangleActivity;
 import glproj.jongber.androidopengl.term3.activity.RotateCubeActivity;
-import glproj.jongber.androidopengl.term4.activity.ZoomActivity;
+import glproj.jongber.androidopengl.term4.activity.TextureCubeActivity;
+import glproj.jongber.androidopengl.term5.activity.ZoomActivity;
 
 
 public class MainActivity extends AppCompatActivity
@@ -56,7 +57,7 @@ public class MainActivity extends AppCompatActivity
                     }
                     case StudyPlan.Plan4Numb:
                     {
-                        Intent intent = new Intent(getApplicationContext(), ZoomActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), TextureCubeActivity.class);
                         startActivity(intent);
                         break;
                     }

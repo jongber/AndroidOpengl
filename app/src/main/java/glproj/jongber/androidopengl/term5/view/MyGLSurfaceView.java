@@ -1,4 +1,4 @@
-package glproj.jongber.androidopengl.term4.view;
+package glproj.jongber.androidopengl.term5.view;
 
 import android.content.Context;
 import android.opengl.GLSurfaceView;
@@ -18,7 +18,7 @@ public class MyGLSurfaceView extends GLSurfaceView
         setEGLContextClientVersion(2);
 
 
-        mRenderer = new MyGLRenderer(context);
+        mRenderer = new MyGLRenderer();
 
         // Set the Renderer for drawing on the GLSurfaceView
         setRenderer(mRenderer);

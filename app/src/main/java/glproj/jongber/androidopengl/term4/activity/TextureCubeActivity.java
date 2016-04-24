@@ -7,7 +7,7 @@ import android.os.Bundle;
 import glproj.jongber.androidopengl.term4.view.MyGLSurfaceView;
 
 
-public class ZoomActivity extends Activity
+public class TextureCubeActivity extends Activity
 {
     private GLSurfaceView mGLView;
 

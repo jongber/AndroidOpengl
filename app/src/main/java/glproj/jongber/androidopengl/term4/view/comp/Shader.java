@@ -1,4 +1,4 @@
-package glproj.jongber.androidopengl.term3.view.helper;
+package glproj.jongber.androidopengl.term4.view.comp;
 
 import android.content.Context;
 import android.opengl.GLES20;
@@ -8,7 +8,6 @@ import java.nio.FloatBuffer;
 import java.util.HashMap;
 
 import glproj.jongber.androidopengl.StaticContext;
-import glproj.jongber.androidopengl.term3.view.MyGLRenderer;
 import glproj.jongber.androidopengl.utils.AssetUtils;
 
 /**
@@ -16,7 +15,6 @@ import glproj.jongber.androidopengl.utils.AssetUtils;
  */
 public class Shader
 {
-
     private String mVSrc;
     private String mFSrc;
 
@@ -151,6 +149,16 @@ public class Shader
         else
         {
             Log.e(StaticContext.LogTag, "invalid uniform value[" + uniformValue + "]");
+        }
+    }
+
+    public void setUniformSampler(String uniformValue)
+    {
+        int id = getUniformLoc(uniformValue);
+
+        if (id != 0)
+        {
+            GLES20.glUniform1i(id, 0);
         }
     }
 
